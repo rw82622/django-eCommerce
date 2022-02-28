@@ -59,7 +59,7 @@ Additionally, your site should:
   - Include appropriate site navigation between all pages
   - Include some basic styling using CSS
     - BONUS: Include some Bootstrap components (other than Button)
-  - Implement shopping cart functionality using JavaScript and persist data using your browser's localStorage object.
+  - Implement shopping cart functionality using JavaScript.
     - NOTE: You do not need to worry about showing item quantities, removing items, or anything else really, other than just displaying items that were added to the cart
     - BONUS: Include aggregated quantities and total price of shopping cart items
   
