@@ -21,9 +21,9 @@
 - Do not open a pull request against this repository. We will evaluate your code individually with you.
 
 ## Requirements
-- This assessment must be completed using raw SQL on your back-end.
+- This assessment must be completed using raw SQL for your database.
 - You may use either SQLite3 or PostgreSQL for your database.
-- This assessment must be completed using HTML, CSS, Bootstrap, and vanilla JS on your front-end.
+- This assessment must be completed with a Django application that uses HTML, CSS, Bootstrap, and vanilla JS on the front-end.
 
 ## Challenge
 E-commerce business continues to grow in our digital age. For this challenge, we want you to develop two disconnected components of a full-stack application for an e-commerce company:
