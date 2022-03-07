@@ -44,14 +44,14 @@ Your database should be designed to store customer, product, category, and order
   4. Retrieve the product names and prices of all products ordered by the customer with first name "Bugs" and last name "Bunny"
 
 ### Part II: Front-End Website
-Your e-commerce website should be structured using HTML, designed using CSS/Bootstrap, and made functional via vanilla JavaScript. This website should feature multiple pages, which should include:
+Your e-commerce website should be a Django application that renders HTML templates, designed using CSS/Bootstrap, and made functional via vanilla JavaScript. This website should feature multiple pages, which should include:
 - **Home page** (index.html)
   - This page should show just a basic intro and other common basic home page content
 - **Category pages**
   - There should be a separate page for each of the various product categories (e.g. "Home", "Kitchen", "Bed & Bath", "Office", etc...)
   - These pages should show various (at least 3 per category) products with images, names, and prices. 
     - NOTE: You can hard code these products for each page. You do not need to make it dynamic (i.e. do not need to use JavaScript to present product information) 
-  - These pages should allow users to add products to their virtual shopping cart
+  - These pages should allow users to add products to their virtual shopping cart. The shopping cart should be persistend using CSV files, which are read and written using Django. 
 - **Shopping Cart page**
   - This page should show all of the items that were added to the user's shopping cart
 
