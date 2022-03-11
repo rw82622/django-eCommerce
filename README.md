@@ -5,10 +5,10 @@
 - Make sure you read the [Assessment-3 Grading Rubric](https://docs.google.com/spreadsheets/d/1-YjVU8Wt7qgW8yOImASqB2uYiLBu93dVJuLYjUlEIgk/edit?usp=sharing).
   - Database (50%)
   - Website (50%)
-- This assessment is worth 15% of your final grade. You need to get a 75% or better to pass. (You must pass all assessments in order to graduate Code Platoon's program.)
+- You need to get a 75% or better to pass. (You must pass all assessments in order to graduate Code Platoon's program.)
 - If you fail the assessment, you have can retake it once to improve your score. For this assessment... 
   - *5% penalty*: If you complete and submit the retake **within one week** of receiving your grade.
-  - *10% penalty*: If you complete and submit the retake adter one week of receiving your grade.
+  - *10% penalty*: If you complete and submit the retake after one week of receiving your grade.
 
 ## Rules / Process
 - This test is fully open notes and open Google, but is not to be completed with the help of any other student/individual.
