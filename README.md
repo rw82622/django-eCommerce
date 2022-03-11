@@ -3,14 +3,8 @@
 
 ## Important Grading Information
 - Make sure you read the [Assessment-3 Grading Rubric](https://docs.google.com/spreadsheets/d/1-YjVU8Wt7qgW8yOImASqB2uYiLBu93dVJuLYjUlEIgk/edit?usp=sharing).
-  - Database (60%)...
-    - Schema (30%)
-    - Seed Data (10%)
-    - Queries (20%)
-  - Website (40%)...
-    - Structure (20%)
-    - Look & Layout (10%)
-    - Functionality (10%)
+  - Database (50%)
+  - Website (50%)
 - This assessment is worth 15% of your final grade. You need to get a 75% or better to pass. (You must pass all assessments in order to graduate Code Platoon's program.)
 - If you fail the assessment, you have can retake it once to improve your score. For this assessment... 
   - *5% penalty*: If you complete and submit the retake **within one week** of receiving your grade.
@@ -44,13 +38,12 @@ Your database should be designed to store customer, product, category, and order
   4. Retrieve the product names and prices of all products ordered by the customer with first name "Bugs" and last name "Bunny"
 
 ### Part II: Front-End Website
-Your e-commerce website should be a Django application that renders HTML templates, designed using CSS/Bootstrap, and made functional via vanilla JavaScript. This website should feature multiple pages, which should include:
+Your e-commerce website should be a Django application that renders HTML templates, and designed using CSS/Bootstrap. This website should feature multiple pages, which should include:
 - **Home page** (index.html)
   - This page should show just a basic intro and other common basic home page content
 - **Category pages**
   - There should be a separate page for each of the various product categories (e.g. "Home", "Kitchen", "Bed & Bath", "Office", etc...)
-  - These pages should show various (at least 3 per category) products with images, names, and prices. 
-    - NOTE: You can hard code these products for each page. You do not need to make it dynamic (i.e. do not need to use JavaScript to present product information) 
+  - These pages should show various (at least 3 per category) products with images, names, and prices. This data should come from the Django server (i.e. don't hardcode them into your HTML pages) 
   - These pages should allow users to add products to their virtual shopping cart. The shopping cart should be persisted using CSV files, which are read and written using Django. 
 - **Shopping Cart page**
   - This page should show all of the items that were added to the user's shopping cart
@@ -58,8 +51,8 @@ Your e-commerce website should be a Django application that renders HTML templat
 Additionally, your site should:
   - Include appropriate site navigation between all pages
   - Include some basic styling using CSS
-    - BONUS: Include some Bootstrap components (other than Button)
-  - Implement shopping cart functionality using JavaScript.
+    - BONUS: Include some advanced Bootstrap components (other than Button)
+  - Implement shopping cart functionality.
     - NOTE: You do not need to worry about showing item quantities, removing items, or anything else really, other than just displaying items that were added to the cart
     - BONUS: Include aggregated quantities and total price of shopping cart items
   
