@@ -1,7 +1,25 @@
 body {
-    background-color: red;
+    background-color: #d3d7d8;
 }
 nav {
-    margin-top: 20px;
+    padding: 20px;
     margin-bottom: 20px;
+}
+img {
+    height: 150px;
+    width: 150px;
+    margin-top: 30px;
+}
+#addToCart {
+    width: 150px;
+}
+#searchBox {
+    border-radius: 20px;
+}
+#myForm {
+    width: 50%; 
+    padding-top: 20px
+}
+#cartTotal {
+    color: #f08804
 }
