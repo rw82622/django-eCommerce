@@ -1,0 +1,7 @@
+{% extends "store/search.html" %}
+{% block div %}
+<div style="justify-items: center;" class="vstack gap-3">
+        <img src="{{ response.icon.preview_url }}" alt="{{ response.term }}">
+        <button id='addToCart' class="btn btn-primary">Add To Cart</button>
+</div>
+{% endblock %}
