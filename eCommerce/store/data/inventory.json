@@ -1,0 +1,26 @@
+{
+    "footwear": [
+        {"name": "Womens Summer Beach Sandals","imageUrl": "images/sandals.jpg","price": 20},
+        {"name": "Nike Zoom Pegasus 36","imageUrl": "images/pegasus.jpg","price": 120.50},
+        {"name": "Air Jordan 9 Retro","imageUrl": "images/jordan.jpg","price": 439.95},
+        {"name": "Womens Lace Flowers Heels","imageUrl": "images/heels.jpg","price": 42.98}
+    ],
+    "fitness": [
+        {"name": "NordicTrack Treadmill","imageUrl": "images/treadmill.jpg","price": 649.00},
+        {"name": "Schwinn Indoor Bike","imageUrl": "images/indoorBike.jpg","price": 785.99},
+        {"name": "Weider XRS Home Gym","imageUrl": "images/homeGym.jpg","price": 378.00},
+        {"name": "Flybird Adjustable Bench","imageUrl": "images/bench.jpg","price": 139.99}
+    ],
+    "electronics": [
+        {"name": "Sony 55 inch TV","imageUrl": "images/sony.jpg","price": 998.00},
+        {"name": "Apple Airpods Pro","imageUrl": "images/airpodsPro.jpg","price": 199.98},
+        {"name": "HP DeskJet Printer","imageUrl": "images/printer.jpg","price": 84.89},
+        {"name": "ASUS VivoBook Flip 14","imageUrl": "images/asus.jpg","price": 400.99}
+    ],
+    "books": [
+        {"name": "Introduction to Java","imageUrl": "images/java.jpg","price": 109.32},
+        {"name": "Introduction to Python","imageUrl": "images/python.jpg","price": 34.95},
+        {"name": "Introduction to React","imageUrl": "images/react.jpg","price": 49.19},
+        {"name": "Introduction to Django","imageUrl": "images/django.jpg","price": 46.20}
+    ]
+}

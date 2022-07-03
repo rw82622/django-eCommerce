@@ -6,7 +6,13 @@ import os
 import json
 
 
-
+my_path = os.path.abspath(os.path.dirname(__file__))
+file_path = os.path.join(my_path, "./data/inventory.json")
+    
+with open(file_path) as f:
+    data = json.load(f)
+    content = {"inventory": data}
+    
 def index(request):
     
     data = {}
@@ -27,13 +33,16 @@ def search(request):
         return render(request, 'store/searchResult.html', data)
     
 def footwear(request):
-    return render(request, 'store/footwear.html')
+    return render(request, 'store/footwear.html', content)
 
-def clothes(request):
-    return render(request, 'store/clothes.html')
+def fitness(request):
+    return render(request, 'store/fitness.html', content)
 
 def electronics(request):
-    return render(request, 'store/electronics.html')
+    return render(request, 'store/electronics.html', content)
+
+def books(request):
+    return render(request, 'store/books.html', content)
 
 def cart(request):
     return render(request, 'store/cart.html')

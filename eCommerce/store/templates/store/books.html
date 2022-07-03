@@ -1,8 +1,9 @@
-{% extends "store/layout.html" %} {% block title %}<title>Footwear</title>{% endblock %}
+{% extends "store/layout.html" %} {% block title %}<title>Books</title>{% endblock %}
+{% load static %}
 {% block content %}
-<h1 style="font-size: 3em">Welcome to the Footwear Page</h1>
+<h1 style="font-size: 3em">Welcome to the Books Page</h1>
 <div style="justify-items: center;" class="hstack gap-5">
-  {% for item in inventory.footwear %}
+  {% for item in inventory.books %}
   <div class="card" style="width: 18rem;">
     <img src="../static/{{item.imageUrl}}" class="card-img-top" alt="{{ item.name }}">
     <div class="card-body">
