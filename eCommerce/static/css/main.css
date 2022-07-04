@@ -6,9 +6,22 @@ nav {
     margin-bottom: 20px;
 }
 img {
-    height: 150px;
-    width: 150px;
-    margin-top: 30px;
+    height: 200px;
+    width: 200px;
+    margin:auto
+}
+.card {
+    margin-top: 20px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+
+}
+.card img {
+    padding: 10px
+}
+h1 {
+    margin: 50px;
 }
 #addToCart {
     width: 150px;
@@ -22,4 +35,25 @@ img {
 }
 #cartTotal {
     color: #f08804
+}
+.addToCart-button {
+    background-color: #ffc720;
+}
+.hide {
+    display: none;
+}
+#home-top-left {
+    margin-top: 50px;
+}
+#jabra img{
+    width: 100%;
+    height: 350px;
+}
+footer {
+    margin: 20px
+}
+#fitBanner{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
 }

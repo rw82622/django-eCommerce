@@ -1,15 +1,14 @@
 {% extends "store/layout.html" %} {% block title %}<title>Books</title>{% endblock %}
-{% load static %}
 {% block content %}
 <h1 style="font-size: 3em">Welcome to the Books Page</h1>
 <div style="justify-items: center;" class="hstack gap-5">
   {% for item in inventory.books %}
-  <div class="card" style="width: 18rem;">
-    <img src="../static/{{item.imageUrl}}" class="card-img-top" alt="{{ item.name }}">
+  <div class="card" style="width: 20rem;" data-id="books{{ item.id }}">
+    <img src="../static/{{item.imageUrl}}" alt="{{ item.name }}">
     <div class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>
       <h6 class="card-text">${{ item.price }}</h6>
-      <a href="#" class="btn btn-primary">Add to Cart</a>
+      <button class="btn addToCart-button">Add to Cart</button>
     </div>
   </div>
   {% endfor %}

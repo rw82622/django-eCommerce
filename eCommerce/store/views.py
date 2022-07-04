@@ -14,23 +14,33 @@ with open(file_path) as f:
     content = {"inventory": data}
     
 def index(request):
-    
-    data = {}
-    return render(request, 'store/index.html', data)
+    return render(request, 'store/index.html', content)
 
 def search(request):
     if request.method == 'GET':
         return render(request, 'store/search.html')
     elif request.method == 'POST':
-        search_item = request.POST.get('name')
-        load_dotenv()
-        auth = OAuth1(os.environ['apiKey'], os.environ['apiSecret'])
-        endpoint = f"http://api.thenounproject.com/icon/{search_item}"
+        result = []
+        search_item = request.POST.get('name').lower()
+        with open(file_path) as f:
+            data = json.load(f)
+            for key in data:
+                for item in data[key]:
+                    item_name = item['name'].lower()
+                    if item_name.find(search_item) >= 0:
+                        result.append(item)
+            if len(result) > 0:
+                content = {'data': result}
+                return render(request, 'store/searchResult.html', content)
+            else:
+                load_dotenv()
+                auth = OAuth1(os.environ['apiKey'], os.environ['apiSecret'])
+                endpoint = f"http://api.thenounproject.com/icon/{search_item}"
 
-        response = requests.get(endpoint, auth=auth)
-        print(response.content)
-        data = {'response': json.loads(response.content)}
-        return render(request, 'store/searchResult.html', data)
+                response = requests.get(endpoint, auth=auth)
+                print(response.content)
+                data = {'response': json.loads(response.content)}
+                return render(request, 'store/outOfStock.html', data)
     
 def footwear(request):
     return render(request, 'store/footwear.html', content)
@@ -43,6 +53,3 @@ def electronics(request):
 
 def books(request):
     return render(request, 'store/books.html', content)
-
-def cart(request):
-    return render(request, 'store/cart.html')

@@ -1,14 +1,15 @@
 {% extends "store/layout.html" %} {% block title %}<title>Clothes</title>{% endblock %}
 {% block content %}
 <h1 style="font-size: 3em">Welcome to the Fitness Page</h1>
-<div style="justify-items: center;" class="hstack gap-5">
+<div><img id="fitBanner" src="https://images-na.ssl-images-amazon.com/images/G/01/sports/marinpow/ASO-Header-ExerciseFitness.jpg"></div>
+<div class="hstack gap-5">
   {% for item in inventory.fitness %}
-  <div class="card" style="width: 18rem;">
-    <img src="../static/{{item.imageUrl}}" class="card-img-top" alt="{{ item.name }}">
+  <div class="card" style="width: 20rem;" data-id="fitness{{ item.id }}">
+    <img src="../static/{{item.imageUrl}}" alt="{{ item.name }}">
     <div class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>
       <h6 class="card-text">${{ item.price }}</h6>
-      <a href="#" class="btn btn-primary">Add to Cart</a>
+      <button class="btn addToCart-button">Add to Cart</button>
     </div>
   </div>
   {% endfor %}

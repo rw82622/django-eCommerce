@@ -1,7 +1,15 @@
 {% extends "store/search.html" %}
 {% block div %}
-<div style="justify-items: center;" class="vstack gap-3">
-        <img src="{{ response.icon.preview_url }}" alt="{{ response.term }}">
-        <button id='addToCart' class="btn btn-primary">Add To Cart</button>
-</div>
+<div style="justify-items: center; margin-top:30px" class="hstack gap-5">
+    {% for item in data %}
+    <div class="card" style="width: 20rem;">
+      <img src="../static/{{item.imageUrl}}" class="card-img-top" alt="{{ item.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <h6 class="card-text">${{ item.price }}</h6>
+        <button class="btn addToCart-button">Add to Cart</button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 {% endblock %}
