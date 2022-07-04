@@ -52,7 +52,7 @@ function updateStoreCart(){
             cartTotalPrice += (item.quantity * Number(item.price.replace('$','')))
             addItemToCart(item.imageUrl, item.name, item.price, item.quantity)
         }
-        document.querySelector('#cartTotalPrice').innerText = `TOTAL: $${cartTotalPrice}`
+        document.querySelector('#cartTotalPrice').innerText = `TOTAL: $${cartTotalPrice.toFixed(2)}`
     }
 }
 
@@ -68,7 +68,7 @@ function addItemToCart(image, name, price, quantity=1){
         itemQuantity.innerText = quantity
         cartRow.append(itemQuantity)
         let subTotal = document.createElement('td')
-        subTotal.innerText = `$${quantity * Number(price.replace('$',''))}`
+        subTotal.innerText = `$${(quantity * Number(price.replace('$',''))).toFixed(2)}`
         cartRow.append(subTotal)
         let cartItems = document.querySelector('#cartTable')
         cartItems.append(cartRow)

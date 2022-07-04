@@ -38,7 +38,6 @@ def search(request):
                 endpoint = f"http://api.thenounproject.com/icon/{search_item}"
 
                 response = requests.get(endpoint, auth=auth)
-                print(response.content)
                 data = {'response': json.loads(response.content)}
                 return render(request, 'store/outOfStock.html', data)
     
