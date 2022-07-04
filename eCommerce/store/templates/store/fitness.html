@@ -5,7 +5,7 @@
 <div class="hstack gap-5">
   {% for item in inventory.fitness %}
   <div class="card" style="width: 20rem;" data-id="fitness{{ item.id }}">
-    <img src="../static/{{item.imageUrl}}" alt="{{ item.name }}">
+    <img src="../static/{{item.imageUrl}}" alt="{{ item.name }}" class="productImage">
     <div class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>
       <h6 class="card-text">${{ item.price }}</h6>

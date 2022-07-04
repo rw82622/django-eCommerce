@@ -3,7 +3,6 @@
 <h1 style="font-size: 3em">Welcome to the Footwear Page</h1>
 
 <div id="footwearBannerWrapper">
-  <!-- <img src="../static/images/running.jpg" alt=""> -->
   <img src="https://target.scene7.com/is/image/Target/StripBar_D_-220303-1646356534996?wid=2160&qlt=80&fmt=webp" alt="">
   <div class="imgText">
   <h2>Kick off Sandal Season<br>from $10</h2>
@@ -14,7 +13,7 @@
 <div style="justify-items: center" class="hstack">
   {% for item in inventory.footwear %}
   <span class="card" style="width: 20rem;" data-id="footwear{{ item.id }}">
-    <img src="../static/{{item.imageUrl}}" class="card-img-top" alt="{{ item.name }}">
+    <img src="../static/{{item.imageUrl}}" class="productImage card-img-top" alt="{{ item.name }}">
     <span class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>
       <h6 class="card-text">${{ item.price }}</h6>

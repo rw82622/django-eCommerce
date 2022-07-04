@@ -9,7 +9,7 @@ for (let i = 0; i < addToCartButtons.length; i++){
 function updateLocalStorage(event){
     let clickedButton = event.target
     let myRow = clickedButton.parentElement.parentElement
-    let productImage = myRow.getElementsByClassName('card-img-top')[0].src
+    let productImage = myRow.getElementsByClassName('productImage')[0].src
     let productName = myRow.getElementsByClassName('card-title')[0].innerText
     let productPrice = myRow.getElementsByClassName('card-text')[0].innerText
     let productId = myRow.getAttribute('data-id')
