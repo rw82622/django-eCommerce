@@ -10,9 +10,9 @@
 </div>
 <div><img src="https://finishline.a.bigcontent.io/v1/static/JD_012721_STATUS_HeroBanner_Desktop_1213x300_V2"></div>
 </div>
-<div style="justify-items: center" class="hstack">
+<div class="cardDiv">
   {% for item in inventory.footwear %}
-  <span class="card" style="width: 20rem;" data-id="footwear{{ item.id }}">
+  <span class="card" data-id="footwear{{ item.id }}">
     <img src="../static/{{item.imageUrl}}" class="productImage card-img-top" alt="{{ item.name }}">
     <span class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>

@@ -1,9 +1,9 @@
 {% extends "store/search.html" %}
 {% block div %}
-<div style="justify-items: center; margin-top:30px" class="hstack gap-5">
+<div style="margin-top:30px" class="cardDiv">
     {% for item in data %}
-    <div class="card" style="width: 20rem;">
-      <img src="../static/{{item.imageUrl}}" class="card-image-top productImage" alt="{{ item.name }}">
+    <div class="card">
+      <img src="../static/{{item.imageUrl}}" class="productImage" alt="{{ item.name }}">
       <div class="card-body">
         <h5 class="card-title">{{ item.name }}</h5>
         <h6 class="card-text">${{ item.price }}</h6>

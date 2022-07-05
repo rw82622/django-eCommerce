@@ -1,6 +1,6 @@
 {
     "footwear": [
-        {"id":1,"name": "Womens Summer Beach Sandals","imageUrl": "images/sandals.jpg","price": 20},
+        {"id":1,"name": "Womens Beach Sandals","imageUrl": "images/sandals.jpg","price": 20},
         {"id":2,"name": "Mens Nike Zoom Pegasus 36","imageUrl": "images/pegasus.jpg","price": 120.50},
         {"id":3,"name": "Mens Nike Air Jordan 9 Retro","imageUrl": "images/jordan.jpg","price": 439.95},
         {"id":4,"name": "Womens Lace Flowers Heels","imageUrl": "images/heels.jpg","price": 42.98}

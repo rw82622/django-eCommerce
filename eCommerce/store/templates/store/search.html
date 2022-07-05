@@ -8,11 +8,16 @@
 </style> 
 {% endblock %}
 {% block content %}
-<div style="justify-items: center;" class="vstack gap-5">
+<div style="justify-items: center;">
   <form method="POST" id="myForm" class="hstack gap-3 m-auto">
     {% csrf_token %}
       <input id='searchBox' type="text" name="name" placeholder="Enter Item name" class="form-control"/>
       <button type="submit" class="btn btn-outline-dark">Submit</button>
-</form>
+  </form>
 </div>
 {% endblock %}
+{% block footer %}
+<footer style="text-align: center; font-size: large" class="fixed-bottom">
+        <strong>&copy 2022 Rexford Wiafe</strong>
+    </footer>
+{% endblock%}

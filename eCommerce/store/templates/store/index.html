@@ -7,10 +7,10 @@
     <h4><strong class="red">Extra 20% off Storewide</strong> with code: REXTHEGREAT</h4>
     <H4>FREE Same Day Delivery for <span class="red">Vets</span></H4>
   </div>
-  <div class="hstack gap-5">
+  <div class="cardDiv">
     {% for item in inventory.homepage %}
-    <div class="card" style="width: 20rem;">
-      <img src="../static/{{item.imageUrl}}" class="" alt="{{ item.name }}">
+    <div class="card">
+      <img src="../static/{{item.imageUrl}}" alt="{{ item.name }}">
       <div class="card-body">
         <h2 class="card-title">{{ item.name }}</h2>
         <a href="{{ item.toLink }}" class="btn btn-success">Shop Now</a>

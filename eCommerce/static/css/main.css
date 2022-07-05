@@ -11,13 +11,17 @@ img {
 }
 .card {
     margin: 20px;
-    width: 300px;
+    width: 18rem;
     height: 350px;
-    text-align: center;
+    text-align: center; 
+    display:inline-block
 
 }
 .card img {
     padding: 10px
+}
+.cardDiv {
+    text-align: center;
 }
 h1 {
     margin-top: 50px;
@@ -74,6 +78,11 @@ footer {
     top: 20px;
     left: 40px;
 }
+
+.imgText h2, h3{
+    font-size: 0.9em;
+}
+
 #footwearBanner {
     width: 80%;
 }
