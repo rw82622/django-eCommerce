@@ -44,9 +44,6 @@ h1 {
 .addToCart-button {
     background-color: #ffc720;
 }
-.hide {
-    display: none;
-}
 #home-top-left {
     margin-top: 50px;
 }
@@ -65,7 +62,8 @@ footer {
     border-radius: 12px;
 }
 .electronicsBanner {
-    position: relative
+    position: relative;
+    background-image: linear-gradient(#ffffff00 90%, #f7f7fd);
 }
 .electronicsBanner img{
     width: 100%;
@@ -78,11 +76,11 @@ footer {
     top: 20px;
     left: 40px;
 }
-
-.imgText h2, h3{
-    font-size: 0.9em;
-}
-
+@media only screen and (max-width: 710px) {
+    .imgText h2, h3{
+      font-size: 0.9em
+    }
+  }
 #footwearBanner {
     width: 80%;
 }
