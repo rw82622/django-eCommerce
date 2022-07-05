@@ -42,6 +42,11 @@ function updateLocalStorage(event){
     }
     //update user's cart with information from in local storage
     updateStoreCart()
+    //notify user that the product has been added to the cart by showing a Toast
+    document.querySelector("#myToast").className += " show";
+    setTimeout(
+      () => (document.querySelector("#myToast").classList.remove('show')),
+      2000 );
 }
 
 function updateStoreCart(){
