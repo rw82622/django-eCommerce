@@ -8,17 +8,38 @@ import json
 
 my_path = os.path.abspath(os.path.dirname(__file__))
 file_path = os.path.join(my_path, "./data/inventory.json")
-    
+
+# get store items information from the inventory.json file
 with open(file_path) as f:
     data = json.load(f)
     content = {"inventory": data}
     
+# send store item info to be displayed on the Home Page
 def index(request):
     return render(request, 'store/index.html', content)
 
+# send store item info to be displayed on the Footwear (Category) Page
+def footwear(request):
+    return render(request, 'store/footwear.html', content)
+
+# send store item info to be displayed on the Fitness (Category) Page
+def fitness(request):
+    return render(request, 'store/fitness.html', content)
+
+# send store item info to be displayed on the Electronics (Category) Page
+def electronics(request):
+    return render(request, 'store/electronics.html', content)
+
+# send store item info to be displayed on the Books (Category) Page
+def books(request):
+    return render(request, 'store/books.html', content)
+
+# allow user to search for an item by name.
 def search(request):
+    # show user the search page
     if request.method == 'GET':
         return render(request, 'store/search.html')
+    # check if the product the user searched for is available in the store
     elif request.method == 'POST':
         result = []
         search_item = request.POST.get('name').lower()
@@ -29,9 +50,11 @@ def search(request):
                     item_name = item['name'].lower()
                     if item_name.find(search_item) >= 0:
                         result.append(item)
+            # send the product to the searchResult page to be displayed if it's available
             if len(result) > 0:
                 content = {'data': result}
                 return render(request, 'store/searchResult.html', content)
+            # if the product is not available, get an image of it from the noun project api and send it to the frontend
             else:
                 load_dotenv()
                 auth = OAuth1(os.environ['apiKey'], os.environ['apiSecret'])
@@ -40,15 +63,3 @@ def search(request):
                 response = requests.get(endpoint, auth=auth)
                 data = {'response': json.loads(response.content)}
                 return render(request, 'store/outOfStock.html', data)
-    
-def footwear(request):
-    return render(request, 'store/footwear.html', content)
-
-def fitness(request):
-    return render(request, 'store/fitness.html', content)
-
-def electronics(request):
-    return render(request, 'store/electronics.html', content)
-
-def books(request):
-    return render(request, 'store/books.html', content)
