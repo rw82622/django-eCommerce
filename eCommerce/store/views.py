@@ -153,10 +153,16 @@ def add_to_cart(request, id):
         return JsonResponse({'cart_total': getCartTotal(request)})
 
 
-def cart_info(request):
-    cart = Cart.objects.filter(user_id=request.user.id)
-    cartList = []
-    for item in cart:
-        cartList.append(item.__dict__)
-    cartList = f"{cartList}"
-    return JsonResponse({'cart': cartList})
+@login_required(login_url='login')
+def cart(request):
+    all_items = Cart.objects.select_related('product')
+    user_items = all_items.filter(user_id=request.user.id)
+    total_cost = 0
+    for item in user_items:
+        total_cost += item.product.price * item.quantity
+    data = {
+        'cart': user_items,
+        'cart_total': getCartTotal(request),
+        'total_cost': total_cost
+    }
+    return render(request, 'store/cart.html', data)

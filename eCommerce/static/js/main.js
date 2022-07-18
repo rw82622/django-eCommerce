@@ -23,32 +23,3 @@ function addToCart(event){
         console.log("Toast Failed.")
     }
 }   
-
-function getCartInfo(){
-    try {
-        axios.get('/cartcontents').then((response) => {
-            // let cart = (response.data.cart)
-            console.log(response)
-            // for (let item of response.data.cart){
-            //     let cartRow = document.createElement('tr')
-            //     let itemName = document.createElement('td')
-            //     itemName.innerText = item.product_id.name
-            //     cartRow.append(itemName)
-            //     let itemPrice = document.createElement('td')
-            //     itemPrice.innerText = `$${item.product_id.price}`
-            //     cartRow.append(itemPrice)
-            //     let itemQuantity = document.createElement('td')
-            //     itemQuantity.innerText = item.quantity
-            //     cartRow.append(itemQuantity)
-            //     let subTotal = document.createElement('td')
-            //     subTotal.innerText = `$${(item.quantity * item.product_id.price).toFixed(2)}`
-            //     cartRow.append(subTotal)
-            //     let cartItems = document.querySelector('#cartTable')
-            //     cartItems.append(cartRow)
-            // }
-        })
-    }
-    catch(e) {
-        console.log("Soemthind went wrong in getCartInfo() in main.js")
-    }
-}

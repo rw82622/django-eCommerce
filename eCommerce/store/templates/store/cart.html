@@ -1,0 +1,40 @@
+{% extends "store/index.html" %}
+{% load mathfilters %}
+{% block title %}<title>Cart</title>{% endblock %}
+{% block content %}
+<h1 style="font-size: 3em">Your Cart</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub-total</th>
+        </tr>
+    </thead>
+    <tbody id="cartTable">
+        {% for item in cart %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+            <td>${{ item.product.price }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ item.quantity |mul:item.product.price }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <h4>Total: ${{ total_cost }}</h4>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+{% endblock %}
+{% block footer %}
+<footer class="fixed-bottom">
+    <strong>&copy 2022 Rexford Wiafe</strong>
+</footer>
+{% endblock %}

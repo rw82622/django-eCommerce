@@ -26,10 +26,9 @@
         </li>
       </ul>
       <div class="form-inline my-2 my-lg-0">
-        <button id="theCartBtn" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#cartModal"
-          onclick="getCartInfo()">Cart
-          <span id="cartTotal" class="badge text-bg-secondary">{{cart_total}}</span>
-        </button>
+        <a href="/cart"><button class="btn btn-warning">Cart
+            <span id="cartTotal" class="badge text-bg-secondary">{{cart_total}}</span>
+          </button></a>
         <a href="/logout/"><button class="btn btn-danger">Logout</button></a>
       </div>
     </div>
