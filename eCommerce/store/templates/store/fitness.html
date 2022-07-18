@@ -1,15 +1,16 @@
-{% extends "store/layout.html" %} {% block title %}<title>Clothes</title>{% endblock %}
+{% extends "store/index.html" %} {% block title %}<title>Clothes</title>{% endblock %}
 {% block content %}
 <h1 style="font-size: 3em">Welcome to the Fitness Page</h1>
-<div><img id="fitBanner" src="https://images-na.ssl-images-amazon.com/images/G/01/sports/marinpow/ASO-Header-ExerciseFitness.jpg"></div>
+<div><img id="fitBanner"
+    src="https://images-na.ssl-images-amazon.com/images/G/01/sports/marinpow/ASO-Header-ExerciseFitness.jpg"></div>
 <div class="cardDiv">
-  {% for item in inventory.fitness %}
+  {% for item in data %}
   <div class="card" data-id="fitness{{ item.id }}">
     <img src="../static/{{item.imageUrl}}" alt="{{ item.name }}" class="productImage">
     <div class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>
       <h6 class="card-text">${{ item.price }}</h6>
-      <button class="btn addToCart-button">Add to Cart</button>
+      <button id={{item.id}} class="btn addToCart-button">Add to Cart</button>
     </div>
   </div>
   {% endfor %}

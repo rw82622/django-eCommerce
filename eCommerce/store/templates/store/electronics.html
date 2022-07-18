@@ -1,23 +1,25 @@
-{% extends "store/layout.html" %} {% block title %}<title>Electronics</title>{% endblock %}
+{% extends "store/index.html" %} {% block title %}<title>Electronics</title>{% endblock %}
 {% block content %}
 <h1 style="font-size: 3em">Welcome to the Electronics Page</h1>
 <div class="electronicsBanner">
   <img src="https://target.scene7.com/is/image/Target/GUEST_add03fa9-1194-4c6e-a925-38badd4e998a?wid=2400"></img>
   <div class="imgText">
     <h2>Explore The Latest<br>from Apple.</h2>
-    <h3><span class="red">Save an extra 5%</span><br>on Apple products<br>every day with <span class="red">RexCard</span>.</h3>
+    <h3><span class="red">Save an extra 5%</span><br>on Apple products<br>every day with <span
+        class="red">RexCard</span>.</h3>
   </div>
 </div>
 <div class="cardDiv">
-    {% for item in inventory.electronics %}
-    <div class="card" data-id="electronics{{ item.id }}">
-      <img src="../static/{{item.imageUrl}}"  alt="{{ item.name }}" class="productImage">
-      <div class="card-body">
-        <h5 class="card-title">{{ item.name }}</h5>
-        <h6 class="card-text">${{ item.price }}</h6>
-        <button class="btn addToCart-button">Add to Cart</button>
-      </div>
+  {% for item in data %}
+  <div class="card" data-id="electronics{{ item.id }}">
+    <img src="../static/{{item.imageUrl}}" alt="{{ item.name }}" class="productImage">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <h6 class="card-text">${{ item.price }}</h6>
+      <button id={{item.id}} class="btn addToCart-button">Add to Cart
+      </button>
     </div>
-    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}

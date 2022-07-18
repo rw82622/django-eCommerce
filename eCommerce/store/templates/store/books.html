@@ -1,15 +1,17 @@
-{% extends "store/layout.html" %} {% block title %}<title>Books</title>{% endblock %}
+{% extends "store/index.html" %} {% block title %}<title>Books</title>{% endblock %}
 {% block content %}
 <h1 style="font-size: 3em">Welcome to the Books Page</h1>
-<div id="booksBanner"><img src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2022/06/28/23694_BB_B_SummerR_Paperback_06-28.jpg" alt="Summer Time and Readding is Easy"></div>
+<div id="booksBanner"><img
+    src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2022/06/28/23694_BB_B_SummerR_Paperback_06-28.jpg"
+    alt="Summer Time and Readding is Easy"></div>
 <div class="cardDiv">
-  {% for item in inventory.books %}
+  {% for item in data %}
   <div class="card" data-id="books{{ item.id }}">
     <img src="../static/{{item.imageUrl}}" alt="{{ item.name }}" class="productImage">
     <div class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>
       <h6 class="card-text">${{ item.price }}</h6>
-      <button class="btn addToCart-button">Add to Cart</button>
+      <button id={{item.id}} class="btn addToCart-button">Add to Cart</button>
     </div>
   </div>
   {% endfor %}

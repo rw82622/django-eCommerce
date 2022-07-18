@@ -1,0 +1,32 @@
+{% extends 'store/layout.html' %}
+{% block title %}<title>Sign Up</title>{% endblock %}
+{% block content %}
+<form method="POST" class="myForm">
+    {% csrf_token %}
+    <h3 style="text-align: center">Sign-Up</h3>
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstname" placeholder="First Name" class="form-control" required />
+    <br />
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastname" placeholder="Last Name" class="form-control" required />
+    <br />
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="Email" class="form-control" required />
+    <br />
+    <label for="userName">User Name</label>
+    <input type="text" name="username" placeholder="Username" class="form-control" required />
+    <br />
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Password" class="form-control" required />
+    <br />
+    {% if msg %}
+    <p>{{msg}}</p>
+    {% endif %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
+{% block footer %}
+<footer class="fixed-bottom">
+    <strong>&copy 2022 Rexford Wiafe</strong>
+</footer>
+{% endblock %}
